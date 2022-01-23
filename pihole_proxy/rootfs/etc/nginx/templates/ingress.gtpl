@@ -8,7 +8,7 @@ server {
     deny    all;
     
     location / {
-        proxy_pass http://backend/web/;
+        proxy_pass http://backend/admin/;
         include /etc/nginx/includes/proxy_params.conf;
     } 
 }
