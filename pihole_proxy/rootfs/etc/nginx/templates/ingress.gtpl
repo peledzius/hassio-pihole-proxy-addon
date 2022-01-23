@@ -9,7 +9,8 @@ server {
     
     location / {
         proxy_pass http://backend/admin/;
-		proxy_set_header X-Frame-Options 'SAMEORIGIN';
+		#proxy_set_header X-Frame-Options 'SAMEORIGIN';
+		proxy_hide_header 'x-frame-options';
         include /etc/nginx/includes/proxy_params.conf;
     } 
 }
